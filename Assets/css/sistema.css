@@ -1,0 +1,220 @@
+ /* Reset básico para margens e preenchimento */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Estilo do header */
+  .header {
+    background-color: #000; /* Cor preta */
+    color: #fff;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 28px;
+  }
+  .header .titulo {
+    font-size: 2em;
+    font-weight: bold;
+  }
+
+  .header-navbar {
+    display: flex;
+  }
+
+  .header-navbar ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+  }
+
+  .header-navbar ul li {
+    position: relative;
+    margin: 0 15px;
+  }
+
+  .header-navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+  }
+
+  .header-navbar ul li a:hover {
+    background-color: #555;
+    color: #ffd700;
+  }
+
+  .header-navbar .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    min-width: 200px;
+    padding: 10px 0;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(10px);
+  }
+
+  .header-navbar .submenu a {
+    color: #fff;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .header-navbar .submenu a:hover {
+    background-color: #555;
+    color: #ffd700;
+  }
+
+  .header-navbar ul li:hover .submenu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Adicionar seta ao submenu */
+  .header-navbar ul li > a::after {
+    content: "\f078"; /* Código da seta para baixo do FontAwesome */
+    font-family: "Bootstrap Icons";
+    margin-left: 8px;
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+  }
+
+  .header-navbar ul li:hover > a::after {
+    transform: rotate(
+      -180deg
+    ); /* Seta apontando para cima ao passar o mouse */
+  }
+
+  /* Estilo do Banner */
+  .Banner-titulo {
+    background: url(./../img/imagem6.jpeg) no-repeat center center;
+    background-size: cover;
+    height: 911px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  /* Estilo dos Cards de Conhecimento */
+  .card-conhecimento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+    padding: 20px;
+    background-color: #212121; /* Fundo escuro */
+    color: #fff; /* Texto branco */
+  }
+
+  .card-conhecimento > p {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #ffd700; /* Dourado */
+  }
+
+  .card-wrapper {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    flex: 1;
+    max-width: 23%;
+    background-color: #333; /* Cor de fundo escura */
+    color: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .card h1 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #ffd700; /* Dourado */
+  }
+
+  .card p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Estilo do rodapé */
+  .rodape-site {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rodape-Principal {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Três colunas */
+    align-items: center;
+  }
+
+  .rodape-titulo {
+    color: blue;
+    font-size: 24px;
+    text-align: left;
+  }
+
+  .rodape-informacoes {
+    color: #fff;
+    text-align: center;
+  }
+
+  .rodape-informacoes i {
+    margin-right: 8px;
+    color: #ccc;
+  }
+
+  .redes-sociais-empresa {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+  }
+
+  .social-icon {
+    font-size: 24px;
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+
+  .social-icon:hover {
+    color: #ffd700;
+  }
+
+  .rodape-secundario {
+    background-color: #555;
+    color: #ddd;
+    padding: 10px;
+    text-align: right;
+  }
