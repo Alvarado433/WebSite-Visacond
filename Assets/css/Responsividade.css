@@ -1,58 +1,44 @@
-/* Estilos para telas menores que 768px (tablets e celulares) */
+/* Responsividade - Menu Hambúrguer */
 @media (max-width: 768px) {
-    .header .titulo {
-      font-size: 1.5em;
-    }
-
-    .header-navbar ul {
-      flex-direction: column;
-      padding: 0;
-    }
-
-    .header-navbar ul li {
-      margin: 0;
-    }
-
-    .header-navbar ul li a {
-      padding: 10px;
-      text-align: center;
-      display: block;
-    }
-
-    .header-navbar .submenu {
-      position: static;
-      opacity: 1;
-      transform: none;
-    }
-
-    .header-navbar ul li:hover .submenu {
-      display: block;
-    }
-
-    .card-wrapper {
-      flex-direction: column;
-    }
-
-    .card {
-      max-width: 100%;
-      margin: 10px 0;
-    }
-
-    .rodape-site {
-      flex-direction: column;
-    }
-
-    .rodape-Principal {
-      grid-template-columns: 1fr; /* Uma coluna */
-      text-align: center;
-    }
-
-    .rodape-informacoes {
-      margin-top: 20px;
-    }
-
-    .redes-sociais-empresa {
-      justify-content: center;
-      margin-top: 20px;
-    }
+  .header .titulo {
+    font-size: 1.5em;
   }
+
+  .header-navbar {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .card-wrapper {
+    flex-direction: column;
+  }
+
+  .card {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+
+  .rodape-Principal {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .redes-sociais-empresa {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  /* Responsividade do Banner */
+  .Banner-titulo {
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Reduz a altura para telas menores */
+    margin-top: 0;
+  }
+}
