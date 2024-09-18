@@ -42,3 +42,20 @@
     margin-top: 0;
   }
 }
+
+
+/* Estilo Responsivo */
+@media (max-width: 768px) {
+  .contratar-me {
+    flex-direction: column;
+  }
+
+  .info-empresa,
+  .formulario-contrato {
+    min-width: 100%;
+  }
+
+  .info-empresa {
+    margin-bottom: 30px;
+  }
+}
